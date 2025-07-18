@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Platformer Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    
+    <div class="ui-overlay">
+        <div id="main-menu" class="game-state">
+            <h1>Platformer Adventure</h1>
+            <button id="start-button">Start Game</button>
+            <button id="controls-button">Controls</button>
+        </div>
+        
+        <div id="game-ui" class="game-state hidden">
+            <div class="stats">
+                <div id="health">Health: <span>3</span></div>
+                <div id="score">Score: <span>0</span></div>
+                <div id="level">Level: <span>1</span></div>
+            </div>
+        </div>
+        
+        <div id="controls-menu" class="game-state hidden">
+            <h2>Controls</h2>
+            <p>Move Left: Left Arrow or A</p>
+            <p>Move Right: Right Arrow or D</p>
+            <p>Jump: Space or Up Arrow or W</p>
+            <button id="back-button">Back</button>
+        </div>
+        
+        <div id="level-complete" class="game-state hidden">
+            <h2>Level Complete!</h2>
+            <p>Score: <span id="level-score">0</span></p>
+            <button id="next-level-button">Next Level</button>
+        </div>
+        
+        <div id="game-over" class="game-state hidden">
+            <h2>Game Over</h2>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-button">Play Again</button>
+            <button id="menu-button">Main Menu</button>
+        </div>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="js/utils.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
